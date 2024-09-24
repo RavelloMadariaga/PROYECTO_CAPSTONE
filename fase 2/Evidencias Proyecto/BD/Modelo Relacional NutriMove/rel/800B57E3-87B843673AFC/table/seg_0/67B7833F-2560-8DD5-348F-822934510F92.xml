@@ -19,18 +19,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="F5932709-0ED3-D673-AC29-80FF563E2640">
-<createdBy>56945</createdBy>
-<createdTime>2024-09-24 03:21:03 UTC</createdTime>
-<generatorID>D64BD355-BB2F-C763-5F70-3FB79E457D55</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="contraseña" id="80C35F3A-647D-EE61-09FD-9865E9DD4A04">
 <createdBy>56945</createdBy>
 <createdTime>2024-09-24 03:21:03 UTC</createdTime>

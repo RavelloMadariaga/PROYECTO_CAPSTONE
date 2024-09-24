@@ -48,7 +48,6 @@ ALTER TABLE rutina ADD CONSTRAINT rutina_pk PRIMARY KEY ( id_rutina );
 
 CREATE TABLE usuario (
     id_user      NUMBER NOT NULL,
-    nombre       VARCHAR2(20) NOT NULL,
     contraseña   VARCHAR2(20) NOT NULL,
     email        VARCHAR2(100) NOT NULL,
     persona_rut  VARCHAR2(12) NOT NULL
