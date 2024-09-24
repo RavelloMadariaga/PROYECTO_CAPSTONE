@@ -1,0 +1,203 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FBE3F4F2-0622-ACC6-F9BC-0E74455F9534" name="PERSONA">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>631FE421-F2DC-E273-C596-E3CFFA2BCCB3</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rut" id="72D12B6F-5117-3F68-A07F-7782F0173A4E">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>00E19530-C16E-7236-E988-03E236B628E1</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_pri" id="D0771589-F4C8-FCFA-BE47-ACBF65132377">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>0D6ADB4B-6F0F-3107-4A58-3F3AB4FB73AA</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_sec" id="4346374D-826A-4DE2-F4ED-EAD6DBC84171">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>18C46AAB-2B73-6A55-27FC-3F67C6E2802C</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido_pat" id="24F80926-0852-C547-5BB4-8C1D948BCFBF">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>FDB08E47-F991-5F09-1240-D88C434CF641</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido_mat" id="D9D4D931-274A-D111-5196-F6C8AE6A7225">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>6253C43B-7CBF-78E1-7279-893027829B00</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="peso" id="33E727BC-7441-2F55-F526-F5A863D19340">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>1203EFD0-8633-ED33-07C6-AEEA8DDE5E4C</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estatura" id="5834A99A-75E1-D689-CE5A-3A04A76606E0">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>072C8780-8677-48A6-7CE4-BE538E1EDBA9</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="act_ficica" id="14BA22FE-C1D0-A25B-FDBC-610345420F37">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<comment><![CDATA[Actividad fisica semanal ]]></comment>
+<generatorID>2DE36DCC-391C-DDBB-5AAB-FE2EB7D9E74F</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="discapacidad" id="404F326B-0345-ABAA-01D1-76527895738A">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>F667F52C-3C0A-F1FE-D657-67FB7F139445</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="objetivo" id="7187F93D-A74F-98EF-578B-37809B5655E4">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>EE0903C1-E0A9-192F-F34F-EA8DC32B0CD9</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="edad" id="B7486340-4980-4133-4329-4830450B8134">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>24A8E75D-F2FB-92D6-B01F-989D81D8DFA9</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nac" id="85F17DCE-E4A6-2A85-269B-540BDD286421">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>4CD3ED88-8B9A-5DBA-C6C2-C94F86C2A2A7</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_id_user" id="EE158027-7446-D1B0-4CDF-6EAB5A6FAC38">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>B8579256-BBC4-49AA-2A2B-972196777205</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F2EA389-BF23-47EF-420E-FCF29358625E" referredColumn="105CA1A2-D1F5-2B4A-12E2-B98CF45B5EA0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF17675E-F5D8-5C57-DD30-211F2F7A1677" name="PERSONA_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>5BC3A6C9-6DCC-7AD0-B253-BB7C9B3F2396</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72D12B6F-5117-3F68-A07F-7782F0173A4E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A047F1D5-187D-F279-159C-3360E2FFF3C6" name="PERSONA__IDX">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="EE158027-7446-D1B0-4CDF-6EAB5A6FAC38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F70CFCD-805D-9D03-CAE6-F6DD118EAB92" name="PERSONA_USUARIO_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 03:21:03 UTC</createdTime>
+<generatorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</generatorID>
+<ownerDesignName>Modelo de la base de datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE158027-7446-D1B0-4CDF-6EAB5A6FAC38"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
