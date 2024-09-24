@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="9DB9D081-7CC4-9467-A93A-E7F41EB9684A" mainViewID="F8AF2FB2-5B59-8B16-33DD-6435F9E3EC51">
+<createdBy>56945</createdBy>
+<createdTime>2024-09-24 00:59:33 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

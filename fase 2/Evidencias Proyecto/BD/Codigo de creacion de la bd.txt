@@ -1,0 +1,80 @@
+CREATE TABLE estadisticas (
+    id_ent                NUMBER NOT NULL,
+    date_recorded         DATE NOT NULL,
+    sesiones_completadas  NUMBER NOT NULL,
+    total_sesiones        NUMBER NOT NULL,
+    porcentaje_de_mejora  NUMBER(5, 2) NOT NULL,  
+    tiem_total_ent        NUMBER NOT NULL,
+    heart_rate            NUMBER NOT NULL,
+    rutina_id_rutina      NUMBER NOT NULL,
+    persona_rut           VARCHAR2(12) NOT NULL,
+    imc                   NUMBER(4, 2) NOT NULL    
+);
+
+ALTER TABLE estadisticas ADD CONSTRAINT estadisticas_pk PRIMARY KEY ( id_ent );
+
+CREATE TABLE persona (
+    rut              VARCHAR2(12) NOT NULL,
+    nombre_pri       VARCHAR2(15) NOT NULL,
+    nombre_sec       VARCHAR2(15),
+    apellido_pat     VARCHAR2(15) NOT NULL,
+    apellido_mat     VARCHAR2(15) NOT NULL,
+    peso             NUMBER(5, 2) NOT NULL,      
+    estatura         NUMBER(5, 2) NOT NULL,      
+    act_ficica       NUMBER NOT NULL,
+    discapacidad     NUMBER NOT NULL,
+    objetivo         VARCHAR2(100) NOT NULL,
+    edad             NUMBER NOT NULL,
+    fecha_nac        DATE NOT NULL,
+    usuario_id_user  NUMBER NOT NULL
+);
+
+CREATE UNIQUE INDEX persona__idx ON
+    persona (
+        usuario_id_user
+    ASC );
+
+ALTER TABLE persona ADD CONSTRAINT persona_pk PRIMARY KEY ( rut );
+
+CREATE TABLE rutina (
+    id_rutina       NUMBER NOT NULL,
+    tipo_rut        VARCHAR2(25) NOT NULL,
+    total_sesiones  NUMBER NOT NULL,
+    nombre          VARCHAR2(20) NOT NULL,
+    persona_rut     VARCHAR2(12) NOT NULL
+);
+
+ALTER TABLE rutina ADD CONSTRAINT rutina_pk PRIMARY KEY ( id_rutina );
+
+CREATE TABLE usuario (
+    id_user      NUMBER NOT NULL,
+    nombre       VARCHAR2(20) NOT NULL,
+    contraseña   VARCHAR2(20) NOT NULL,
+    email        VARCHAR2(100) NOT NULL,
+    persona_rut  VARCHAR2(12) NOT NULL
+);
+
+CREATE UNIQUE INDEX usuario__idx ON
+    usuario (
+        persona_rut
+    ASC );
+
+ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id_user );
+
+-- Relaciones
+ALTER TABLE estadisticas
+    ADD CONSTRAINT estadisticas_persona_fk FOREIGN KEY ( persona_rut )
+        REFERENCES persona ( rut );
+
+ALTER TABLE estadisticas
+    ADD CONSTRAINT estadisticas_rutina_fk FOREIGN KEY ( rutina_id_rutina )
+        REFERENCES rutina ( id_rutina );
+
+ALTER TABLE persona
+    ADD CONSTRAINT persona_usuario_fk FOREIGN KEY ( usuario_id_user )
+        REFERENCES usuario ( id_user );
+
+-- Relación uno a muchos
+ALTER TABLE rutina
+    ADD CONSTRAINT rutina_persona_fk FOREIGN KEY ( persona_rut )
+        REFERENCES persona ( rut );
