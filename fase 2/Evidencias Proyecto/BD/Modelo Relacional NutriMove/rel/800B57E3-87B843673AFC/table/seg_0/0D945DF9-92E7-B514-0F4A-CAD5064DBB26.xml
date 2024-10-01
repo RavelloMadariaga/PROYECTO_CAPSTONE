@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0D945DF9-92E7-B514-0F4A-CAD5064DBB26" name="ADMIN">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:31:50 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_admin" id="B478B50A-9C46-26B4-5375-24A39DD311DA">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:33:39 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="9B55E8ED-2AFA-E99B-137B-F2FAF3E3B0B3">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:33:39 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="60BB9693-5A1A-6470-1A03-BD1EA4D10B20">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:33:39 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contraseña" id="23F12928-3707-D67C-4078-78EC5B1BFC97">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:34:01 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_tef" id="7B9A6F01-7C28-DB44-30CB-8D4D8075D50A">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:34:47 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_id_user1" id="DC835414-0519-EFBB-BFBF-9FED072065D7">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<generatorID>E31063DC-DE5E-36D3-7493-144B111A398A</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7D0724D-357E-89BB-4DF8-05D628863D00" referredColumn="DEC96171-E55A-5B39-FC97-C6BF3683F3FF"/>
+</associations>
+</Column>
+<Column name="nombre1" id="39E4E6D4-7226-159F-3B12-F8042DF7F815">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<generatorID>A6F5553A-21E7-46D2-0945-DA7ADD79AEDD</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido" id="F46D467B-8392-CE9F-4DA3-52A4AC3F0187">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<generatorID>77CEBE4B-0F9D-8D7E-6D11-06FA01460F2A</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF1539AB-C24B-F673-5F95-E99D66526DB6" name="ADMIN_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:33:39 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B478B50A-9C46-26B4-5375-24A39DD311DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC4E4B99-625D-B38B-69D1-B504D7902A35" name="ADMIN__IDX">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>4F88A688-9A12-B519-7FE4-4A5E577FA6AD</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="DC835414-0519-EFBB-BFBF-9FED072065D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72B3D26C-05C5-D11F-278B-66F567ED8881" name="ADMIN_USUARIO_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:19:59 UTC</createdTime>
+<generatorID>4F88A688-9A12-B519-7FE4-4A5E577FA6AD</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC835414-0519-EFBB-BFBF-9FED072065D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

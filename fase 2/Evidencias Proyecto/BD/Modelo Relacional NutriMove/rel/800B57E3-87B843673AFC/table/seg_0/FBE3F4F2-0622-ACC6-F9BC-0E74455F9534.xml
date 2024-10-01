@@ -159,9 +159,40 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="5F2EA389-BF23-47EF-420E-FCF29358625E" referredColumn="105CA1A2-D1F5-2B4A-12E2-B98CF45B5EA0"/>
-</associations>
+</Column>
+<Column name="num_tef_p" id="9F4B683F-FE48-AEAF-2416-FE12B4838CC4">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 21:35:25 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO_id_user2" id="D623B1C6-B667-01BE-8D71-A3D06AFE2665">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<generatorID>0FA165F6-F529-B6B2-85C8-8444A7A20B31</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="205ACCBC-2803-681C-D0FA-B010302265EF">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<generatorID>906FE140-F5B1-AD5E-B6B8-98ED50ACD1C1</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -188,15 +219,15 @@
 <colUsage columnID="EE158027-7446-D1B0-4CDF-6EAB5A6FAC38"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6F70CFCD-805D-9D03-CAE6-F6DD118EAB92" name="PERSONA_USUARIO_FK">
+<ind_PK_UK id="BBD82EEB-940F-DFB3-1E78-FFFB4C8FBD3A" name="PERSONA__IDX">
 <createdBy>56945</createdBy>
-<createdTime>2024-09-24 03:21:03 UTC</createdTime>
-<generatorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</generatorID>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<indexState>Foreign Key</indexState>
+<indexState>Unique Plain Index</indexState>
 <isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</relationGeneratorID>
 <indexColumnUsage>
-<colUsage columnID="EE158027-7446-D1B0-4CDF-6EAB5A6FAC38"/>
+<colUsage columnID="D623B1C6-B667-01BE-8D71-A3D06AFE2665"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

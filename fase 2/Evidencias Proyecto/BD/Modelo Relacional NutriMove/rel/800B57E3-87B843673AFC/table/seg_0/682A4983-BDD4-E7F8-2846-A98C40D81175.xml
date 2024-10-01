@@ -109,7 +109,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>12</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -126,6 +126,21 @@
 <logicalDatatype>LOGDT021</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RESUMEN_PROGRESO_id_resumen" id="1E2E2E73-F8A3-2CBA-A18D-708C6726BAD0">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<generatorID>8E082251-B158-9455-F244-60F8AEC1654B</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="40AFF729-2F0B-A86C-891A-70D185A7840E" referredColumn="4CADD33F-4DFA-0FC3-2B43-E7714565E5C3"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -161,6 +176,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="50D3A0BE-9083-A36B-0605-31E88E741F08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E5FF80B-50E2-8F87-6A9D-DC0854A7C4D6" name="ESTADISTICAS_RESUMEN_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:18:39 UTC</createdTime>
+<generatorID>A851962F-A457-6DB6-849F-6610B799D339</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E2E2E73-F8A3-2CBA-A18D-708C6726BAD0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

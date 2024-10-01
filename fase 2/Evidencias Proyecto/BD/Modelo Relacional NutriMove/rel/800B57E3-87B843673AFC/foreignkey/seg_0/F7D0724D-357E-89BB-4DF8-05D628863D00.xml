@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5F2EA389-BF23-47EF-420E-FCF29358625E" containerWithKeyObject="FBE3F4F2-0622-ACC6-F9BC-0E74455F9534" localFKIndex="6F70CFCD-805D-9D03-CAE6-F6DD118EAB92" name="PERSONA_USUARIO_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F7D0724D-357E-89BB-4DF8-05D628863D00" containerWithKeyObject="0D945DF9-92E7-B514-0F4A-CAD5064DBB26" localFKIndex="72B3D26C-05C5-D11F-278B-66F567ED8881" name="ADMIN_USUARIO_FK">
 <createdBy>56945</createdBy>
-<createdTime>2024-09-24 03:21:03 UTC</createdTime>
-<generatorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</generatorID>
+<createdTime>2024-10-01 22:19:59 UTC</createdTime>
+<generatorID>4F88A688-9A12-B519-7FE4-4A5E577FA6AD</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <referredTableLongName>USUARIO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
@@ -10,7 +10,7 @@
 <keyObject>EEF15122-6CA7-A284-23D9-A71F677430D0</keyObject>
 <referredKeyID>EEF15122-6CA7-A284-23D9-A71F677430D0</referredKeyID>
 <mandatory>true</mandatory>
-<refColNames>id_user</refColNames>
+<refColNames>id_user1</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
