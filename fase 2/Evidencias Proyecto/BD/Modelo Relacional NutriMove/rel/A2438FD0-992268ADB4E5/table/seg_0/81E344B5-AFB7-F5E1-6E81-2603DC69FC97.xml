@@ -1,0 +1,171 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="81E344B5-AFB7-F5E1-6E81-2603DC69FC97" name="USUARIO">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>3D1EB185-09E3-6FD4-460E-8E7E7947BB1A</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_user" id="72D34331-DC9A-E5DC-DF6E-5EE65E7E32C1">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>CE17C3AC-EFCE-11AC-C7C0-742ECD63184D</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="0180DC9F-6D64-743C-C31C-76F77A21099D">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>D64BD355-BB2F-C763-5F70-3FB79E457D55</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contrasena" id="6D43409F-0D33-C2DC-FED0-3055CA10B9F1">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>669AEF69-9F1C-04A0-3B34-49FC271DA425</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADMIN_id_admin" id="C54AD7A7-E61A-914B-CA3D-62A36BBFAD33">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>4D907CFE-57A7-62F8-6C3B-FA63697C0CE8</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ABBCE584-56E3-F3F3-6D99-E79BE72EF70E" referredColumn="EEB88DDE-67AE-BB54-DB40-D27FC333C046"/>
+</associations>
+</Column>
+<Column name="tipo" id="9AB0D1D1-1BCF-E459-6F33-40EF8688DBEE">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>B668AE53-FFEB-659A-012A-6BB460B193B8</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERSONA_rut" id="362F0C64-1F55-5EEA-59CD-BEC71068FFFB">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>9DC108A1-C70F-4C58-2156-D1B97F34B715</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0057EBB5-DEB4-B087-9261-627202CAEE18" referredColumn="D448CE3B-5070-8838-AC6A-C37AAA9A23BB"/>
+</associations>
+</Column>
+<Column name="fecha_ini" id="6C20CA93-7D4C-3FE9-3644-07725A39FABD">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>4E252E8E-AFE7-6E1B-CBB8-C0B15E5609FB</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="7AA34A0E-122E-B72C-91E2-76E911AAE131">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>212D73B9-AB88-A186-6CB1-DD520BC0112A</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E47DDF7B-855B-449C-8039-512FF6911FAB" name="USUARIO_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>CDD993B5-DADA-2F5C-0965-4E4695A7741E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72D34331-DC9A-E5DC-DF6E-5EE65E7E32C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EDFD2A09-16D6-26B1-8903-786F5B6C8548" name="USUARIO__IDX">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>4F88A688-9A12-B519-7FE4-4A5E577FA6AD</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="C54AD7A7-E61A-914B-CA3D-62A36BBFAD33"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1515A89B-08A4-E085-511C-BD8DB301F805" name="USUARIO__IDXv1">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="362F0C64-1F55-5EEA-59CD-BEC71068FFFB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C2A9EDF-2B14-6952-1E72-6EA4D17F97E9" name="USUARIO_ADMIN_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>4F88A688-9A12-B519-7FE4-4A5E577FA6AD</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C54AD7A7-E61A-914B-CA3D-62A36BBFAD33"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="20032263-9378-AE6F-64F0-36F744459A3E" name="USUARIO_PERSONA_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="362F0C64-1F55-5EEA-59CD-BEC71068FFFB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

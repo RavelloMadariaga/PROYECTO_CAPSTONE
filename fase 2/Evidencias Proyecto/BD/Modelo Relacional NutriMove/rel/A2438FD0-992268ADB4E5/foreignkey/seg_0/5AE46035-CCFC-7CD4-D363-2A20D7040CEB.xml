@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5AE46035-CCFC-7CD4-D363-2A20D7040CEB" containerWithKeyObject="09B32AAC-C630-08D4-43BE-FB208C83C5F0" localFKIndex="4A98B79A-2E0C-209F-E8AB-F1D534A15565" name="SOPORTE_ADMIN_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>33BC0A63-B999-9DC6-0CF9-B5AEC132F1DD</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<referredTableLongName>ADMIN</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D61ED409-E299-F1AC-9124-7373A4C7C2AA</referredTableID>
+<keyObject>123FFE6A-F5F2-6118-7EEA-8AF550F9E3A2</keyObject>
+<referredKeyID>123FFE6A-F5F2-6118-7EEA-8AF550F9E3A2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_admin</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

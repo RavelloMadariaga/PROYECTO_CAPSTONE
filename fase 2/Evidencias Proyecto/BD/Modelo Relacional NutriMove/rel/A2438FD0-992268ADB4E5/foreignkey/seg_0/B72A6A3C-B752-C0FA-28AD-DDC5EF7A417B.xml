@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B72A6A3C-B752-C0FA-28AD-DDC5EF7A417B" containerWithKeyObject="0E24591F-B5D0-CAE1-4E8E-6DA06E3DA9DE" localFKIndex="C15AC3EB-D7DD-7251-10CB-F5238A292F6B" name="RUTINA_PERSONA_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-01 22:50:01 UTC</createdTime>
+<generatorID>9755C8F0-E290-CFDA-1DAF-04C9AF32F1E9</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<referredTableLongName>PERSONA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3D97B942-0D08-58BD-B325-712E7C90A01D</referredTableID>
+<keyObject>149D159A-D9AF-02D2-1C70-1ACFAC8F03A2</keyObject>
+<referredKeyID>149D159A-D9AF-02D2-1C70-1ACFAC8F03A2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>rut</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

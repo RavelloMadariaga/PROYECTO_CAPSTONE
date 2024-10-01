@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0F6E8887-6D2A-4514-4F3F-3789C2A37C4E" name="RESUMEN_PROGRESO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0F6E8887-6D2A-4514-4F3F-3789C2A37C4E" name="RESUMEN">
 <createdBy>56945</createdBy>
 <createdTime>2024-10-01 22:09:51 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2024-10-01 22:10:15 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2024-10-01 22:10:33 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -44,7 +44,7 @@
 <createdTime>2024-10-01 22:11:21 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -56,7 +56,7 @@
 <createdTime>2024-10-01 22:11:45 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -68,7 +68,7 @@
 <createdTime>2024-10-01 22:13:27 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -80,7 +80,7 @@
 <createdTime>2024-10-01 22:13:53 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -92,7 +92,7 @@
 <createdTime>2024-10-01 22:16:32 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -104,7 +104,7 @@
 <createdTime>2024-10-01 22:16:45 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -117,9 +117,8 @@
 <createdBy>56945</createdBy>
 <createdTime>2024-10-01 22:10:31 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="false"/>
+<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
