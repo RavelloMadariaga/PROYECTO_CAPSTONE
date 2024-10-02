@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1349EC46-70DC-5906-B05E-16E821B8450F" name="SOPORTE">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>43772516-47AD-6BD3-C80E-1D3AB3482847</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_soporte" id="28273EAE-7B8F-A3D1-DAFB-6CE4E1B9CBC7">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>0707F060-063F-CDC8-A3A5-BB75DE577D9E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="modificacion" id="30F05282-6CEC-379F-64AD-EC9AC43E8841">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>D13E91C7-7278-06D7-C2F5-9EA0F26A7E9E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="razon" id="AB9B7404-1D2B-D676-7FB5-ED4C5C693B56">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>262D6694-4D19-44C7-700D-4D4A16309BF2</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="E89D13CE-79AE-F5FC-5759-7FA1896E5A69">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>2FAEE06D-E3F8-F693-F0AA-A9DDBC199629</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_user" id="A7DE5D09-F078-2DB4-B607-5C79B3348665">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>5DB3D40A-8A95-8838-EDCB-E1F1433AC03A</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D379806D-9CCB-F84A-5D19-3EAF289F1A0B" referredColumn="87F63CBA-F36B-6480-E351-C5ECBB72E653"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1792163C-A423-1166-B0F1-D11156B1E7A3" name="SOPORTE_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>042C16D4-9E6A-B873-91BF-50400A34C688</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28273EAE-7B8F-A3D1-DAFB-6CE4E1B9CBC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F05A0DE9-ABE3-9CCF-614D-5A948E6A11A1" name="SOPORTE_USUARIO_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>B28E920B-6D14-F408-36B9-5F2011DB2DBF</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7DE5D09-F078-2DB4-B607-5C79B3348665"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

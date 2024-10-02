@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_16" directorySegmentName="seg_0" id="B28E920B-6D14-F408-36B9-5F2011DB2DBF">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:06:34 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<engineerTo>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
+</engineerTo>
+<sourcePk>CDD993B5-DADA-2F5C-0965-4E4695A7741E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3D1EB185-09E3-6FD4-460E-8E7E7947BB1A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>43772516-47AD-6BD3-C80E-1D3AB3482847</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

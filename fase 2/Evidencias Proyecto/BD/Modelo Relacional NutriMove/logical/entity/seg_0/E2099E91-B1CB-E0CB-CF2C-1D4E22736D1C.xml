@@ -4,7 +4,7 @@
 <createdTime>2024-10-02 02:28:32 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,22 +20,8 @@
 <createdTime>2024-10-02 02:41:11 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_usuario_cli" id="2E8A5DBE-7B7F-6B89-5206-77433B9C633E">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-02 02:36:36 UTC</createdTime>
-<generatorID>B8942349-CC65-CDDF-9A27-94B104204F0E</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
-</engineerTo>
-<referedAttribute>00E19530-C16E-7236-E988-03E236B628E1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -47,7 +33,7 @@
 <generatorID>DA90116F-D8EC-63F2-D1AB-1E175DFB6327</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <referedAttribute>78AAF1B4-ADD6-DEBC-553A-4E927ADDD5FA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
@@ -60,7 +46,7 @@
 <createdTime>2024-10-02 02:41:46 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -72,13 +58,25 @@
 <createdTime>2024-10-02 02:42:14 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_rutina_eje" id="926AF256-7E07-0794-0D77-4BFE383D0316">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:07:15 UTC</createdTime>
+<generatorID>8F50A354-95CB-A326-5034-0591C8F0C301</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<engineerTo>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
+</engineerTo>
+<referedAttribute>89147299-45EE-5919-70BE-3B607C504381</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -87,7 +85,7 @@
 <createdTime>2024-10-02 02:41:42 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

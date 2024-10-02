@@ -5,7 +5,7 @@
 <generatorID>52EAC043-03D8-EF3E-6331-04B37DA255BA</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -22,7 +22,7 @@
 <generatorID>3E925BAF-47F7-A1EC-47D2-73455674848A</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -35,7 +35,7 @@
 <generatorID>1E2C00B5-CA34-88CF-02A1-81047867E789</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -48,7 +48,7 @@
 <generatorID>C8A3748B-9292-5D21-7B67-43861839F94F</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -61,7 +61,7 @@
 <generatorID>43006B8C-35B6-2271-8AC7-35947F3FD50A</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -74,7 +74,7 @@
 <generatorID>644F5F4D-C8A5-2863-CA61-71A164305531</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -87,7 +87,7 @@
 <generatorID>5F40A6CB-0D29-B130-ACB3-5062F7D31E53</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -100,7 +100,7 @@
 <generatorID>DB45A438-55D4-9111-5A76-CC45E1F9EE8B</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -112,7 +112,7 @@
 <createdTime>2024-09-24 03:20:16 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -125,24 +125,12 @@
 <generatorID>141FEA0E-31AF-6D9A-E296-D408525C07DF</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <referedAttribute>48D1E5D7-699F-C9F8-68CC-7760779FCB3D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_rutina_eje" id="1BFD15B7-57D5-DB02-ED7D-000437E0B437">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-02 02:45:06 UTC</createdTime>
-<generatorID>6541F7D9-E820-05D2-14DF-8D1A00C001E2</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
-</engineerTo>
-<referedAttribute>89147299-45EE-5919-70BE-3B607C504381</referedAttribute>
-<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -153,7 +141,7 @@
 <generatorID>D74EC311-F411-835C-218E-4095DCEEDAB7</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
+<item key="BC7A83C1-D8DF-4647-375E-F0A81990A557" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

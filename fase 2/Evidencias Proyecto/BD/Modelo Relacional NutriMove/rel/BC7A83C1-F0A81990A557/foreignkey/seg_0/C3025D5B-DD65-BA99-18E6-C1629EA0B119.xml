@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C3025D5B-DD65-BA99-18E6-C1629EA0B119" containerWithKeyObject="024BA9E3-8D07-970A-BDAA-456C04F99BCC" localFKIndex="B132F8F4-A724-77F7-83E5-36B4FB6E6CB9" name="USUARIO_ROLES_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:12:05 UTC</createdTime>
+<generatorID>8AE08882-620F-5D2C-4ECD-E5158CE0796E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<referredTableLongName>ROLES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9DA150F3-8E9D-2A82-2954-C0FB8078D13F</referredTableID>
+<keyObject>BCAD7321-BC74-5A23-F54B-2572427CEB15</keyObject>
+<referredKeyID>BCAD7321-BC74-5A23-F54B-2572427CEB15</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_rol</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

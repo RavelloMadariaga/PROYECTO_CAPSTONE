@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C1B30FC-E80C-5FF3-C16C-E357DCA3073A" name="EJERCICIOS">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>165F03B1-A8C1-4F76-B304-D5ABC3F73A2B</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_ejercicio" id="2197985D-8442-A421-D256-C256A98DFC09">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>58778674-B0EF-77B5-F0B4-811392FA7C6A</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_ejercicio" id="B11DC9A5-5125-F74A-C8AA-DF7115073AB3">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>58659110-7010-2DE6-3D19-F564930ED8F2</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="A4B88734-7E59-B235-DB3F-50AD62F0D018">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>C247C29D-5FDE-E971-4D6C-053FADDF0D18</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="repeticiones" id="105711E7-8611-E279-198C-BF8FFB980157">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>C854DCBE-EE43-F0CD-DE76-5D069C4F2A3D</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1EAD31AA-5866-F09F-F453-34A76FC3B710" name="EJERCICIOS_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>B4FFA22F-DB94-BF06-3F4C-0221B8AA7834</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2197985D-8442-A421-D256-C256A98DFC09"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

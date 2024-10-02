@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E86B505B-B712-7F01-BC94-1206F65CD532" name="RESUMEN">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>0F6E8887-6D2A-4514-4F3F-3789C2A37C4E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_resumen" id="AAA640C7-0366-0066-4420-DCDED74B4D61">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>3E5C713C-AD20-A135-5E4F-9978EA3ECE77</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="promedio_tiem" id="D18B56C4-BFDA-FDBF-346D-9C39CA3B246E">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>CEB3C8F1-F3E9-9A9B-A9E7-352B3EBFBA60</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imc_rem" id="6E03A98D-4B45-90B6-93A0-A5247639202E">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Imc actual a la fecha del resumen ]]></commentInRDBMS>
+<generatorID>C1650C49-35E6-C2CE-40DA-27CE2CA08691</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="peso_rem" id="78D81982-01AC-DDD1-11DA-ED7B6987D427">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Peso actual de la persona en la fecha del resumen]]></commentInRDBMS>
+<generatorID>33991779-F454-F0E3-B5DF-23F91D8BD3E9</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_resum" id="1D144C06-E1D4-0F2B-DB46-C97128DF24FB">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>D8A9206E-1932-A232-BA90-41F3969AB167</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_ent" id="A6B636CB-BEBA-3FAC-D621-AE5D586D4D2E">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>8756014C-87AE-F894-990A-1403219000C0</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2985416B-0F22-C758-181D-C0B02B432E55" referredColumn="A1631969-41C7-21B0-E28E-FD8E364C6D50"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D5D1CF85-B77C-7432-35AA-C06F8CAE67B6" name="RESUMEN_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>A5DC92C5-D1F1-EF86-0885-673C560DF08D</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAA640C7-0366-0066-4420-DCDED74B4D61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EADA195-59F4-FAF9-9A20-72CF78BCDBDD" name="RESUMEN_ESTADISTICAS_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 20:08:29 UTC</createdTime>
+<generatorID>F56376A7-34A4-FE12-9E4D-8F58920CCC66</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6B636CB-BEBA-3FAC-D621-AE5D586D4D2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

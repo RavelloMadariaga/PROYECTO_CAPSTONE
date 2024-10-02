@@ -1,17 +1,6 @@
-CREATE TABLE admin (
-    id_admin  NUMBER NOT NULL,
-    cargo     VARCHAR2(25) NOT NULL,
-    permisos  VARCHAR2(50) NOT NULL,
-    rol       VARCHAR2(25) NOT NULL,
-    id_user   NUMBER NOT NULL
-);
-
-CREATE UNIQUE INDEX admin_user_idx ON admin (id_user ASC);
-
-ALTER TABLE admin ADD CONSTRAINT admin_pk PRIMARY KEY (id_admin);
-
+-- Tabla ejercicios
 CREATE TABLE ejercicios (
-    id_ejercicio      NUMBER NOT NULL,
+    id_ejercicio      NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
     nombre_ejercicio  VARCHAR2(30) NOT NULL,
     descripcion       VARCHAR2(100) NOT NULL,
     repeticiones      NUMBER NOT NULL
@@ -19,8 +8,9 @@ CREATE TABLE ejercicios (
 
 ALTER TABLE ejercicios ADD CONSTRAINT ejercicios_pk PRIMARY KEY (id_ejercicio);
 
+-- Tabla estadisticas
 CREATE TABLE estadisticas (
-    id_ent                NUMBER NOT NULL,
+    id_ent                NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
     date_recorded         DATE NOT NULL,
     sesiones_completadas  NUMBER NOT NULL,
     total_sesiones        NUMBER NOT NULL,
@@ -28,14 +18,14 @@ CREATE TABLE estadisticas (
     tiem_total_ent        NUMBER NOT NULL,
     heart_rate            NUMBER NOT NULL,
     imc                   FLOAT NOT NULL,
-    id_rutina_us          NUMBER NOT NULL,
-    id_rutina_eje         NUMBER NOT NULL
+    id_rutina_us          NUMBER NOT NULL
 );
 
 ALTER TABLE estadisticas ADD CONSTRAINT estadisticas_pk PRIMARY KEY (id_ent);
 
+-- Tabla resumen
 CREATE TABLE resumen (
-    id_resumen     NUMBER NOT NULL,
+    id_resumen     NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
     promedio_tiem  NUMBER NOT NULL,
     imc_rem        FLOAT NOT NULL,
     peso_rem       FLOAT NOT NULL,
@@ -43,131 +33,118 @@ CREATE TABLE resumen (
     id_ent         NUMBER NOT NULL
 );
 
-COMMENT ON COLUMN resumen.imc_rem IS 'Imc actual a la fecha del resumen ';
+COMMENT ON COLUMN resumen.imc_rem IS 'Imc actual a la fecha del resumen';
 COMMENT ON COLUMN resumen.peso_rem IS 'Peso actual de la persona en la fecha del resumen';
 
 ALTER TABLE resumen ADD CONSTRAINT resumen_pk PRIMARY KEY (id_resumen);
 
+-- Tabla roles
+CREATE TABLE roles (
+    id_rol       NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
+    cargo        VARCHAR2(25) NOT NULL,
+    permisos     VARCHAR2(50) NOT NULL,
+    nombre_rol   VARCHAR2(25) NOT NULL,
+    descripcion  VARCHAR2(100)
+);
+
+ALTER TABLE roles ADD CONSTRAINT roles_pk PRIMARY KEY (id_rol);
+
+-- Tabla rutina
 CREATE TABLE rutina (
-    id_rutina      NUMBER NOT NULL,
+    id_rutina      NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
     nombre_rutina  VARCHAR2(20) NOT NULL,
-    descripcion    VARCHAR2(200)
+    descripcion    VARCHAR2(200),
+    id_user        NUMBER NOT NULL
 );
 
 ALTER TABLE rutina ADD CONSTRAINT rutina_pk PRIMARY KEY (id_rutina);
 
+-- Tabla rutina_ejercicios
 CREATE TABLE rutina_ejercicios (
-    id_ejercicio      NUMBER NOT NULL,
-    rutina_id_rutina  NUMBER NOT NULL,
-    id_rutina_eje     NUMBER NOT NULL
+    id_ejercicio   NUMBER NOT NULL,
+    id_rutina_eje  NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL
 );
 
 ALTER TABLE rutina_ejercicios ADD CONSTRAINT rutina_ejercicios_pk PRIMARY KEY (id_rutina_eje);
 
+-- Tabla rutina_usuario
 CREATE TABLE rutina_usuario (
-    id_rutina_us     NUMBER NOT NULL,
-    id_usuario_cli   NUMBER NOT NULL,
+    id_rutina_us     NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
     id_rutina        NUMBER NOT NULL,
     fecha_rutina     DATE NOT NULL,
-    duracion_rutina  VARCHAR2(15) NOT NULL
+    duracion_rutina  VARCHAR2(15) NOT NULL,
+    id_rutina_eje    NUMBER NOT NULL
 );
 
 ALTER TABLE rutina_usuario ADD CONSTRAINT rutina_usuario_pk PRIMARY KEY (id_rutina_us);
 
+-- Tabla soporte
 CREATE TABLE soporte (
-    id_soporte    NUMBER NOT NULL,
+    id_soporte    NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
     modificacion  VARCHAR2(100) NOT NULL,
     razon         VARCHAR2(100) NOT NULL,
     fecha         DATE NOT NULL,
-    id_admin      NUMBER NOT NULL
+    id_user       NUMBER NOT NULL
 );
 
 ALTER TABLE soporte ADD CONSTRAINT soporte_pk PRIMARY KEY (id_soporte);
 
+-- Tabla usuario
 CREATE TABLE usuario (
-    id_user         NUMBER NOT NULL,
-    rut             VARCHAR2(12) NOT NULL,
-    nombre_user     VARCHAR2(20) NOT NULL,
-    contrasena      VARCHAR2(20) NOT NULL,
-    id_admin        NUMBER NOT NULL,
-    tipo            NUMBER NOT NULL,
-    id_usuario_cli  NUMBER NOT NULL,
-    last_login      DATE NOT NULL,
-    email           VARCHAR2(100) NOT NULL,
-    nombre_pri      VARCHAR2(15) NOT NULL,
-    nombre_sec      VARCHAR2(15),
-    apellido_pat    VARCHAR2(15) NOT NULL,
-    apellido_mat    VARCHAR2(15) NOT NULL,
-    num_tef         NUMBER NOT NULL,
-    fecha_nac       DATE NOT NULL
+    id_user       NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
+    rut           VARCHAR2(12) NOT NULL,
+    nombre_user   VARCHAR2(20) NOT NULL,
+    contrasena    VARCHAR2(20) NOT NULL,
+    email         VARCHAR2(100) NOT NULL,
+    nombre        VARCHAR2(15) NOT NULL,
+    apellido_pat  VARCHAR2(15) NOT NULL,
+    apellido_mat  VARCHAR2(15) NOT NULL,
+    num_tef       NUMBER NOT NULL,
+    peso          FLOAT,
+    estatura      FLOAT,
+    act_fisica    NUMBER,
+    discapacidad  NUMBER,
+    objetivo      VARCHAR2(25),
+    edad          NUMBER NOT NULL,
+    id_rol        NUMBER NOT NULL
 );
-
-CREATE UNIQUE INDEX usuario_cliente_idx ON usuario (id_usuario_cli ASC);
-CREATE UNIQUE INDEX usuario_admin_idx ON usuario (id_admin ASC);
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY (id_user);
 
-CREATE TABLE usuario_cliente (
-    id_usuario_cli  NUMBER NOT NULL,
-    peso            FLOAT NOT NULL,
-    estatura        FLOAT NOT NULL,
-    act_fisica      NUMBER NOT NULL,
-    discapacidad    NUMBER NOT NULL,
-    objetivo        VARCHAR2(100) NOT NULL,
-    edad            NUMBER NOT NULL,
-    id_user         NUMBER NOT NULL
-);
-
-CREATE UNIQUE INDEX usuario_cliente_user_idx ON usuario_cliente (id_user ASC);
-
-ALTER TABLE usuario_cliente ADD CONSTRAINT usuario_cliente_pk PRIMARY KEY (id_usuario_cli);
-
--- Relaciones (Foreign Keys)
-
-ALTER TABLE admin
-    ADD CONSTRAINT admin_usuario_fk FOREIGN KEY (id_user)
-        REFERENCES usuario (id_user);
+-- Relaciones (Claves Foráneas)
 
 ALTER TABLE estadisticas
-    ADD CONSTRAINT estadisticas_rutina_eje_fk FOREIGN KEY (id_rutina_eje)
-        REFERENCES rutina_ejercicios (id_rutina_eje);
-
-ALTER TABLE estadisticas
-    ADD CONSTRAINT estadisticas_rutina_us_fk FOREIGN KEY (id_rutina_us)
+    ADD CONSTRAINT estadisticas_rutina_fk FOREIGN KEY (id_rutina_us)
         REFERENCES rutina_usuario (id_rutina_us);
 
 ALTER TABLE resumen
     ADD CONSTRAINT resumen_estadisticas_fk FOREIGN KEY (id_ent)
         REFERENCES estadisticas (id_ent);
 
+ALTER TABLE rutina_usuario
+    ADD CONSTRAINT rutina_ejercicio_fk FOREIGN KEY (id_rutina_eje)
+        REFERENCES rutina_ejercicios (id_rutina_eje);
+
 ALTER TABLE rutina_ejercicios
-    ADD CONSTRAINT rutina_ejercicios_ejercicio_fk FOREIGN KEY (id_ejercicio)
+    ADD CONSTRAINT rutina_ejercicios_fk FOREIGN KEY (id_ejercicio)
         REFERENCES ejercicios (id_ejercicio);
 
-ALTER TABLE rutina_ejercicios
-    ADD CONSTRAINT rutina_ejercicios_rutina_fk FOREIGN KEY (rutina_id_rutina)
-        REFERENCES rutina (id_rutina);
+ALTER TABLE rutina
+    ADD CONSTRAINT rutina_usuario_fk FOREIGN KEY (id_user)
+        REFERENCES usuario (id_user);
 
 ALTER TABLE rutina_usuario
-    ADD CONSTRAINT rutina_usuario_cliente_fk FOREIGN KEY (id_usuario_cli)
-        REFERENCES usuario_cliente (id_usuario_cli);
-
-ALTER TABLE rutina_usuario
-    ADD CONSTRAINT rutina_usuario_rutina_fk FOREIGN KEY (id_rutina)
+    ADD CONSTRAINT rutina_usuario_fk FOREIGN KEY (id_rutina)
         REFERENCES rutina (id_rutina);
 
 ALTER TABLE soporte
-    ADD CONSTRAINT soporte_admin_fk FOREIGN KEY (id_admin)
-        REFERENCES admin (id_admin);
-
-ALTER TABLE usuario
-    ADD CONSTRAINT usuario_admin_fk FOREIGN KEY (id_admin)
-        REFERENCES admin (id_admin);
-
-ALTER TABLE usuario_cliente
-    ADD CONSTRAINT usuario_cliente_usuario_fk FOREIGN KEY (id_user)
+    ADD CONSTRAINT soporte_usuario_fk FOREIGN KEY (id_user)
         REFERENCES usuario (id_user);
 
 ALTER TABLE usuario
-    ADD CONSTRAINT usuario_usuario_cliente_fk FOREIGN KEY (id_usuario_cli)
-        REFERENCES usuario_cliente (id_usuario_cli);
+    ADD CONSTRAINT usuario_roles_fk FOREIGN KEY (id_rol)
+        REFERENCES roles (id_rol);
+
+-- ÍNDICES ÚNICOS
+CREATE UNIQUE INDEX idx_usuario_rut ON usuario(rut);
+CREATE UNIQUE INDEX idx_usuario_email ON usuario(email);
