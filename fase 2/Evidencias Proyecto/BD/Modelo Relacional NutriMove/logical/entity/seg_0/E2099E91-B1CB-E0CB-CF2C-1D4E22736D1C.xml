@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0F6E8887-6D2A-4514-4F3F-3789C2A37C4E" name="RESUMEN">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E2099E91-B1CB-E0CB-CF2C-1D4E22736D1C" name="RUTINA_USUARIO">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-01 22:09:51 UTC</createdTime>
+<createdTime>2024-10-02 02:28:32 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_resumen" id="3E5C713C-AD20-A135-5E4F-9978EA3ECE77">
+<Attribute name="id_rutina_us" id="48D1E5D7-699F-C9F8-68CC-7760779FCB3D">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-01 22:10:15 UTC</createdTime>
+<createdTime>2024-10-02 02:41:11 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
@@ -27,48 +27,37 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="promedio_tiem" id="CEB3C8F1-F3E9-9A9B-A9E7-352B3EBFBA60">
+<Attribute name="id_usuario_cli" id="2E8A5DBE-7B7F-6B89-5206-77433B9C633E">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-01 22:11:45 UTC</createdTime>
+<createdTime>2024-10-02 02:36:36 UTC</createdTime>
+<generatorID>B8942349-CC65-CDDF-9A27-94B104204F0E</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
+<referedAttribute>00E19530-C16E-7236-E988-03E236B628E1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="imc_rem" id="C1650C49-35E6-C2CE-40DA-27CE2CA08691">
+<Attribute name="id rutina" id="8258C8BA-5494-530A-02A7-DC2C79E4A212">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-01 22:13:53 UTC</createdTime>
-<commentInRDBMS><![CDATA[Imc actual a la fecha del resumen ]]></commentInRDBMS>
+<createdTime>2024-10-02 02:38:00 UTC</createdTime>
+<generatorID>DA90116F-D8EC-63F2-D1AB-1E175DFB6327</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
+<referedAttribute>78AAF1B4-ADD6-DEBC-553A-4E927ADDD5FA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT021</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="peso_rem" id="33991779-F454-F0E3-B5DF-23F91D8BD3E9">
+<Attribute name="fecha_rutina" id="CFA1E2DB-55BB-B487-00F8-850E6FD7399E">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-01 22:16:45 UTC</createdTime>
-<commentInRDBMS><![CDATA[Peso actual de la persona en la fecha del resumen]]></commentInRDBMS>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT021</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="fecha resum" id="D8A9206E-1932-A232-BA90-41F3969AB167">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-02 01:28:31 UTC</createdTime>
-<generatorID>FDF3E669-842C-C0A0-FAD3-CAB6E643A252</generatorID>
+<createdTime>2024-10-02 02:41:46 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
@@ -78,32 +67,31 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_ent" id="8756014C-87AE-F894-990A-1403219000C0">
+<Attribute name="duracion_rutina" id="34E66441-E651-98D1-3E53-5B5C270D61D0">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-02 02:45:14 UTC</createdTime>
-<generatorID>F56376A7-34A4-FE12-9E4D-8F58920CCC66</generatorID>
+<createdTime>2024-10-02 02:42:14 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
-<referedAttribute>BD7B49DC-AACD-E5D6-4BD4-30B73F8226FF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A5DC92C5-D1F1-EF86-0885-673C560DF08D" name="RESUMEN_PK">
+<identifier id="9046D2E3-3E73-EA19-2E34-3C8021C00DE1" name="RUTINA_USUARIO PK">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-01 22:10:31 UTC</createdTime>
+<createdTime>2024-10-02 02:41:42 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>3E5C713C-AD20-A135-5E4F-9978EA3ECE77</attributeRef>
+<attributeRef>48D1E5D7-699F-C9F8-68CC-7760779FCB3D</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

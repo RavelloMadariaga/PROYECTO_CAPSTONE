@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="448CFCAD-B8C3-10C7-46AE-8C3D1730078A" name="RUTINA_USUARIO">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>E2099E91-B1CB-E0CB-CF2C-1D4E22736D1C</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rutina_us" id="37D8078D-0E75-9A3E-0917-A72D837A2DB6">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>48D1E5D7-699F-C9F8-68CC-7760779FCB3D</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_usuario_cli" id="9975B438-FBD8-2788-1455-EE47773496E9">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>2E8A5DBE-7B7F-6B89-5206-77433B9C633E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D498C1E9-692A-2F54-182B-26F8AB2678F7" referredColumn="30D76276-2B1A-53B9-D735-5A856364C170"/>
+</associations>
+</Column>
+<Column name="id_rutina" id="91287E70-A0C7-C73B-F3C3-10D6ECCB9FF1">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>8258C8BA-5494-530A-02A7-DC2C79E4A212</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6AFBDA1B-0D0E-15FC-136A-B3113B17B189" referredColumn="CD7CA49C-7E50-0181-61FD-284EAFB73875"/>
+</associations>
+</Column>
+<Column name="fecha_rutina" id="E05AD7A7-109A-655B-708B-9AACC101CB5D">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>CFA1E2DB-55BB-B487-00F8-850E6FD7399E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="duracion_rutina" id="46B62A3B-0D75-2255-8003-8DF085F7C903">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>34E66441-E651-98D1-3E53-5B5C270D61D0</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C785A9B9-A370-5AFB-57E9-F6B22EEAC2CD" name="RUTINA_USUARIO_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>9046D2E3-3E73-EA19-2E34-3C8021C00DE1</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37D8078D-0E75-9A3E-0917-A72D837A2DB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F70EBDDF-8738-0655-A06D-4AF606778CB4" name="RUTINA_USUARIO_CLIENTE_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>B8942349-CC65-CDDF-9A27-94B104204F0E</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9975B438-FBD8-2788-1455-EE47773496E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CFAC394D-D6D5-9451-233B-6BA401C868E4" name="RUTINA_USUARIO_RUTINA_FK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>DA90116F-D8EC-63F2-D1AB-1E175DFB6327</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91287E70-A0C7-C73B-F3C3-10D6ECCB9FF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

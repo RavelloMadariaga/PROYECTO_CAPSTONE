@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" mainViewID="5E2BEA7B-35C7-5668-5349-DDAC13DADDB3">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-01 22:47:51 UTC</createdTime>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
-</relationalModel>

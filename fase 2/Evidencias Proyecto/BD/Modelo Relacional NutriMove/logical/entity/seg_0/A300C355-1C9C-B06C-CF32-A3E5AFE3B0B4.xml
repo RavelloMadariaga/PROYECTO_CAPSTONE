@@ -1,8 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C33BB796-883B-105D-442F-39B99AE5EF65" name="RUTINA">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A300C355-1C9C-B06C-CF32-A3E5AFE3B0B4" name="RUTINA_EJERCICIOS ">
 <createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>D6D4D8CB-7477-995D-CCB9-77D1793FBE5E</generatorID>
+<createdTime>2024-10-02 02:31:09 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
@@ -16,60 +15,56 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id rutina" id="78AAF1B4-ADD6-DEBC-553A-4E927ADDD5FA">
+<Attribute name="id_ejercicio" id="0BA64294-77D5-03F6-C9B0-E67EBAA7800F">
 <createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>D969CB35-A39A-B313-92DD-9787B939C72A</generatorID>
+<createdTime>2024-10-02 02:40:39 UTC</createdTime>
+<generatorID>5424C5FA-5750-6A35-E3DD-C87151212C01</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
+<referedAttribute>58778674-B0EF-77B5-F0B4-811392FA7C6A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre_rutina" id="80B20789-8CAC-CDE3-5619-B758713D2DC3">
+<Attribute name="id rutina" id="0091D7AF-D28A-25A1-7B02-61A5B27D4E4D">
 <createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>617EB8AE-7323-868F-422D-84459F0397B0</generatorID>
+<createdTime>2024-10-02 02:40:51 UTC</createdTime>
+<generatorID>2E058527-95E0-42AC-6DEF-B9A8A62FCD95</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
+<referedAttribute>78AAF1B4-ADD6-DEBC-553A-4E927ADDD5FA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="descripcion" id="AFCBE0EA-781B-1EE6-49F7-424A863771F5">
+<Attribute name="id_rutina_eje" id="89147299-45EE-5919-70BE-3B607C504381">
 <createdBy>56945</createdBy>
-<createdTime>2024-10-02 02:37:11 UTC</createdTime>
+<createdTime>2024-10-02 02:43:18 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="FF636CF4-ADE2-4EB0-AB44-3EC4F44FA671" name="RUTINA PK">
+<identifier id="CFF47842-B480-B618-F432-EFED47215589" name="RUTINA_EJERCICIOS PK">
 <createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>5E26A970-BB55-AC0A-B667-C8C0213BAE65</generatorID>
+<createdTime>2024-10-02 02:43:20 UTC</createdTime>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
 <item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>78AAF1B4-ADD6-DEBC-553A-4E927ADDD5FA</attributeRef>
+<attributeRef>89147299-45EE-5919-70BE-3B607C504381</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

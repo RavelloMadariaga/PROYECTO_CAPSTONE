@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D558B0E3-A54E-A741-FFA1-08E476B2B220" name="RUTINA">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>C33BB796-883B-105D-442F-39B99AE5EF65</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rutina" id="CD7CA49C-7E50-0181-61FD-284EAFB73875">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>78AAF1B4-ADD6-DEBC-553A-4E927ADDD5FA</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_rutina" id="9021A175-E199-DCB9-27C3-658697539D42">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>80B20789-8CAC-CDE3-5619-B758713D2DC3</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="4FC9828A-8055-D231-74E7-8BFE10220D68">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>AFCBE0EA-781B-1EE6-49F7-424A863771F5</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A01272FF-D091-6958-127C-D229E7E66D72" name="RUTINA_PK">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-02 02:47:32 UTC</createdTime>
+<generatorID>FF636CF4-ADE2-4EB0-AB44-3EC4F44FA671</generatorID>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD7CA49C-7E50-0181-61FD-284EAFB73875"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

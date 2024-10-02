@@ -1,11 +1,11 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="631FE421-F2DC-E273-C596-E3CFFA2BCCB3" name="PERSONA">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="631FE421-F2DC-E273-C596-E3CFFA2BCCB3" name="USUARIO_CLIENTE">
 <createdBy>56945</createdBy>
 <createdTime>2024-09-24 02:06:30 UTC</createdTime>
 <generatorID>FC4719AA-5A7D-BC8D-DD1A-73DBBEF2CF1F</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -16,76 +16,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="rut" id="00E19530-C16E-7236-E988-03E236B628E1">
+<Attribute name="id_usuario_cli" id="00E19530-C16E-7236-E988-03E236B628E1">
 <createdBy>56945</createdBy>
 <createdTime>2024-09-24 02:06:30 UTC</createdTime>
 <generatorID>87637598-30A4-60AB-88EC-7E21A9C5BDF3</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>12</dataTypeSize>
-<ownDataTypeParameters>12,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nombre_pri" id="0D6ADB4B-6F0F-3107-4A58-3F3AB4FB73AA">
-<createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>343FF819-DDDA-D5F3-24EE-9ED12D96159F</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nombre_sec" id="18C46AAB-2B73-6A55-27FC-3F67C6E2802C">
-<createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>DAD47F27-3F5A-C173-A603-F040D3CB869B</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="apellido_pat" id="FDB08E47-F991-5F09-1240-D88C434CF641">
-<createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>09FBB175-8393-B936-37A9-3501FEA41621</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="apellido_mat" id="6253C43B-7CBF-78E1-7279-893027829B00">
-<createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>6B72ECE6-CDD0-4E1E-F07C-D695D9C1E1D0</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="peso" id="1203EFD0-8633-ED33-07C6-AEEA8DDE5E4C">
 <createdBy>56945</createdBy>
@@ -93,7 +35,7 @@
 <generatorID>669326FC-14D4-EB6A-ED7D-92D992B04A2F</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -106,21 +48,21 @@
 <generatorID>FCE4BA8A-85AC-78DF-E51E-303A97798FFF</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT021</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="act_ficica" id="2DE36DCC-391C-DDBB-5AAB-FE2EB7D9E74F">
+<Attribute name="act ficica" id="2DE36DCC-391C-DDBB-5AAB-FE2EB7D9E74F">
 <createdBy>56945</createdBy>
 <createdTime>2024-09-24 02:06:30 UTC</createdTime>
 <comment><![CDATA[Actividad fisica semanal ]]></comment>
 <generatorID>5084E665-9156-3205-8818-958AB020A49A</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -133,7 +75,7 @@
 <generatorID>A8B1F5A6-B2C4-0FD5-64F5-BF993E0784B5</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -146,7 +88,7 @@
 <generatorID>241A3E19-07CB-049D-318B-F20874B923A2</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -160,49 +102,22 @@
 <generatorID>A544E58C-8EDB-A310-33EE-A04654A0A42E</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fecha_nac" id="4CD3ED88-8B9A-5DBA-C6C2-C94F86C2A2A7">
+<Attribute name="id_user" id="8F71E02B-1686-ADB0-58EC-4AA77AB7F836">
 <createdBy>56945</createdBy>
-<createdTime>2024-09-24 02:06:30 UTC</createdTime>
-<generatorID>820BC65C-33B7-A6A7-18B1-E5F3B96077D9</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="num_tef_p" id="1438763C-737F-97B2-E9F2-B9833B9E30BC">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-01 21:38:02 UTC</createdTime>
-<generatorID>9F4B683F-FE48-AEAF-2416-FE12B4838CC4</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_user" id="0FA165F6-F529-B6B2-85C8-8444A7A20B31">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-01 21:46:12 UTC</createdTime>
+<createdTime>2024-10-02 02:30:08 UTC</createdTime>
 <generatorID>5A76E9D2-CBEA-7900-B0E9-BB30A52061FF</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
-<referedAttribute>CE17C3AC-EFCE-11AC-C7C0-742ECD63184D</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
+<referedAttribute>FB7BF319-B214-2243-04E3-47EE8D78195C</referedAttribute>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
@@ -215,7 +130,7 @@
 <generatorID>1E154F8B-551B-0B67-F3C6-D23FC1CC9E86</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="A2438FD0-3DFE-E060-C8DE-992268ADB4E5" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

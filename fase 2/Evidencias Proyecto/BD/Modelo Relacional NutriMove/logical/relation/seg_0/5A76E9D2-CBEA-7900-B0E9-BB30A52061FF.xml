@@ -1,11 +1,11 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="USUARIO PERSONA FK" directorySegmentName="seg_0" id="5A76E9D2-CBEA-7900-B0E9-BB30A52061FF">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PERSONA USUARIO FK" directorySegmentName="seg_0" id="5A76E9D2-CBEA-7900-B0E9-BB30A52061FF">
 <createdBy>56945</createdBy>
 <createdTime>2024-09-24 02:06:30 UTC</createdTime>
 <generatorID>2D34212F-7625-82E7-C528-8CC575E2ECAC</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <engineerTo>
-<item key="800B57E3-AD8B-D29C-7DF1-87B843673AFC" value="true"/>
+<item key="9A144F9C-F369-C1FF-8ACA-86C20B180032" value="true"/>
 </engineerTo>
 <sourcePk>CDD993B5-DADA-2F5C-0965-4E4695A7741E</sourcePk>
 <targetPk>5BC3A6C9-6DCC-7AD0-B253-BB7C9B3F2396</targetPk>
