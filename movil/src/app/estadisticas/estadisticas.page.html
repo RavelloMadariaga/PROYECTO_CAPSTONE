@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>estadisticas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .card p {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .card .icon {
+    font-size: 3em;
+    color: #007bff;
+  }
+</style>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">estadisticas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+
+  <div class="dashboard-container">
+    <div class="card">
+      <i class="fas fa-users icon"></i>
+      <h2>Estatura</h2>
+      <p>174 cm</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-shopping-cart icon"></i>
+      <h2>Peso</h2>
+      <p>64 KL</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-chart-line icon"></i>
+      <h2>IMC(Indice de Masa Corporal)</h2>
+      <p>18.5</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-globe-americas icon"></i>
+      <h2>% de Grasa</h2>
+      <p>13%</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-globe-americas icon"></i>
+      <h2>Progreso de Rutina</h2>
+      <p>100%</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-globe-americas icon"></i>
+      <h2>Progreso perdida de grasa</h2>
+      <p>90%</p>
+    </div>
+  </div>
+</ion-content>
