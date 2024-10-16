@@ -103,17 +103,6 @@
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="num_tef" id="14EEF548-2702-3971-0A7F-66E10EAB85F6">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-02 20:08:29 UTC</createdTime>
-<generatorID>999A4948-E037-AD62-D112-D47890CDA871</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="peso" id="9027C568-30AA-349E-855A-F4248C17A995">
 <createdBy>56945</createdBy>
 <createdTime>2024-10-02 20:08:29 UTC</createdTime>
@@ -138,35 +127,10 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="act_fisica" id="A980FE14-11E2-9C3F-CCE6-FC62EEAA970B">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-02 20:08:29 UTC</createdTime>
-<generatorID>B5E39887-9639-BE02-8C94-6EC35AC484A1</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="discapacidad" id="84451AC8-2817-486F-1D89-891E5C83FBCB">
+<Column name="mesotipo" id="84451AC8-2817-486F-1D89-891E5C83FBCB">
 <createdBy>56945</createdBy>
 <createdTime>2024-10-02 20:08:29 UTC</createdTime>
 <generatorID>2B364965-C9B9-7026-62A6-D8ACFF7C6D03</generatorID>
-<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT006</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="objetivo" id="DE292EDC-8CB1-6771-E3CA-E6314962A9A6">
-<createdBy>56945</createdBy>
-<createdTime>2024-10-02 20:08:29 UTC</createdTime>
-<generatorID>B3DEC7EF-B432-BA33-FA75-70EF458CB388</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -181,6 +145,7 @@
 <createdTime>2024-10-02 20:08:29 UTC</createdTime>
 <generatorID>E5423E1F-E8CA-22B4-2DD2-0487BFA7554F</generatorID>
 <ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

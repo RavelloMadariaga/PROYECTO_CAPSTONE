@@ -59,6 +59,17 @@
 <colAssociation fkAssociation="F7D09F0F-B3A6-DDA2-E86B-CC2156F5BC23" referredColumn="87F63CBA-F36B-6480-E351-C5ECBB72E653"/>
 </associations>
 </Column>
+<Column name="objetivo" id="98CB42C5-6D88-918B-A630-CB9895D863E9">
+<createdBy>56945</createdBy>
+<createdTime>2024-10-16 02:02:45 UTC</createdTime>
+<ownerDesignName>Modelo Relacional NutriMove</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="64503FB7-54D8-8B8A-4932-74EF2D321B37" name="RUTINA_PK">

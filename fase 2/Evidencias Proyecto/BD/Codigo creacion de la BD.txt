@@ -1,150 +1,101 @@
 -- Tabla ejercicios
 CREATE TABLE ejercicios (
-    id_ejercicio      NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
-    nombre_ejercicio  VARCHAR2(30) NOT NULL,
-    descripcion       VARCHAR2(100) NOT NULL,
-    repeticiones      NUMBER NOT NULL
+    id_ejercicio      INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre_ejercicio  TEXT NOT NULL,
+    descripcion       TEXT NOT NULL,
+    repeticiones      INTEGER NOT NULL
 );
-
-ALTER TABLE ejercicios ADD CONSTRAINT ejercicios_pk PRIMARY KEY (id_ejercicio);
 
 -- Tabla estadisticas
 CREATE TABLE estadisticas (
-    id_ent                NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
+    id_ent                INTEGER PRIMARY KEY AUTOINCREMENT,
     date_recorded         DATE NOT NULL,
-    sesiones_completadas  NUMBER NOT NULL,
-    total_sesiones        NUMBER NOT NULL,
-    porcentaje_de_mejora  FLOAT NOT NULL,
-    tiem_total_ent        NUMBER NOT NULL,
-    heart_rate            NUMBER NOT NULL,
-    imc                   FLOAT NOT NULL,
-    id_rutina_us          NUMBER NOT NULL
+    sesiones_completadas  INTEGER NOT NULL,
+    total_sesiones        INTEGER NOT NULL,
+    porcentaje_de_mejora  REAL NOT NULL,
+    tiem_total_ent        INTEGER NOT NULL,
+    heart_rate            INTEGER NOT NULL,
+    imc                   REAL NOT NULL,
+    id_rutina_us          INTEGER NOT NULL,
+    FOREIGN KEY (id_rutina_us) REFERENCES rutina_usuario (id_rutina_us)
 );
-
-ALTER TABLE estadisticas ADD CONSTRAINT estadisticas_pk PRIMARY KEY (id_ent);
 
 -- Tabla resumen
 CREATE TABLE resumen (
-    id_resumen     NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
-    promedio_tiem  NUMBER NOT NULL,
-    imc_rem        FLOAT NOT NULL,
-    peso_rem       FLOAT NOT NULL,
+    id_resumen     INTEGER PRIMARY KEY AUTOINCREMENT,
+    promedio_tiem  INTEGER NOT NULL,
+    imc_rem        REAL NOT NULL,
+    peso_rem       REAL NOT NULL,
     fecha_resum    DATE NOT NULL,
-    id_ent         NUMBER NOT NULL
+    id_ent         INTEGER NOT NULL,
+    FOREIGN KEY (id_ent) REFERENCES estadisticas (id_ent)
 );
 
-COMMENT ON COLUMN resumen.imc_rem IS 'Imc actual a la fecha del resumen';
-COMMENT ON COLUMN resumen.peso_rem IS 'Peso actual de la persona en la fecha del resumen';
-
-ALTER TABLE resumen ADD CONSTRAINT resumen_pk PRIMARY KEY (id_resumen);
+-- Comentario sobre columnas de la tabla resumen
+-- 'Imc actual a la fecha del resumen'
+-- 'Peso actual de la persona en la fecha del resumen'
 
 -- Tabla roles
 CREATE TABLE roles (
-    id_rol       NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
-    cargo        VARCHAR2(25) NOT NULL,
-    permisos     VARCHAR2(50) NOT NULL,
-    nombre_rol   VARCHAR2(25) NOT NULL,
-    descripcion  VARCHAR2(100)
+    id_rol       INTEGER PRIMARY KEY AUTOINCREMENT,
+    cargo        TEXT NOT NULL,
+    permisos     TEXT NOT NULL,
+    nombre_rol   TEXT NOT NULL,
+    descripcion  TEXT
 );
-
-ALTER TABLE roles ADD CONSTRAINT roles_pk PRIMARY KEY (id_rol);
 
 -- Tabla rutina
 CREATE TABLE rutina (
-    id_rutina      NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
-    nombre_rutina  VARCHAR2(20) NOT NULL,
-    descripcion    VARCHAR2(200),
-    id_user        NUMBER NOT NULL
+    id_rutina      INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre_rutina  TEXT NOT NULL,
+    descripcion    TEXT,
+    id_user        INTEGER NOT NULL,
+    objetivo       TEXT NOT NULL,
+    FOREIGN KEY (id_user) REFERENCES usuario (id_user)
 );
-
-ALTER TABLE rutina ADD CONSTRAINT rutina_pk PRIMARY KEY (id_rutina);
 
 -- Tabla rutina_ejercicios
 CREATE TABLE rutina_ejercicios (
-    id_ejercicio   NUMBER NOT NULL,
-    id_rutina_eje  NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL
+    id_ejercicio   INTEGER NOT NULL,
+    id_rutina_eje  INTEGER PRIMARY KEY AUTOINCREMENT,
+    FOREIGN KEY (id_ejercicio) REFERENCES ejercicios (id_ejercicio)
 );
-
-ALTER TABLE rutina_ejercicios ADD CONSTRAINT rutina_ejercicios_pk PRIMARY KEY (id_rutina_eje);
 
 -- Tabla rutina_usuario
 CREATE TABLE rutina_usuario (
-    id_rutina_us     NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
-    id_rutina        NUMBER NOT NULL,
+    id_rutina_us     INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_rutina        INTEGER NOT NULL,
     fecha_rutina     DATE NOT NULL,
-    duracion_rutina  VARCHAR2(15) NOT NULL,
-    id_rutina_eje    NUMBER NOT NULL
+    duracion_rutina  TEXT NOT NULL,
+    id_rutina_eje    INTEGER NOT NULL,
+    FOREIGN KEY (id_rutina) REFERENCES rutina (id_rutina),
+    FOREIGN KEY (id_rutina_eje) REFERENCES rutina_ejercicios (id_rutina_eje)
 );
-
-ALTER TABLE rutina_usuario ADD CONSTRAINT rutina_usuario_pk PRIMARY KEY (id_rutina_us);
 
 -- Tabla soporte
 CREATE TABLE soporte (
-    id_soporte    NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
-    modificacion  VARCHAR2(100) NOT NULL,
-    razon         VARCHAR2(100) NOT NULL,
+    id_soporte    INTEGER PRIMARY KEY AUTOINCREMENT,
+    modificacion  TEXT NOT NULL,
+    razon         TEXT NOT NULL,
     fecha         DATE NOT NULL,
-    id_user       NUMBER NOT NULL
+    id_user       INTEGER NOT NULL,
+    FOREIGN KEY (id_user) REFERENCES usuario (id_user)
 );
-
-ALTER TABLE soporte ADD CONSTRAINT soporte_pk PRIMARY KEY (id_soporte);
 
 -- Tabla usuario
 CREATE TABLE usuario (
-    id_user       NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL,
-    rut           VARCHAR2(12) NOT NULL,
-    nombre_user   VARCHAR2(20) NOT NULL,
-    contrasena    VARCHAR2(20) NOT NULL,
-    email         VARCHAR2(100) NOT NULL,
-    nombre        VARCHAR2(15) NOT NULL,
-    apellido_pat  VARCHAR2(15) NOT NULL,
-    apellido_mat  VARCHAR2(15) NOT NULL,
-    num_tef       NUMBER NOT NULL,
-    peso          FLOAT,
-    estatura      FLOAT,
-    act_fisica    NUMBER,
-    discapacidad  NUMBER,
-    objetivo      VARCHAR2(25),
-    edad          NUMBER NOT NULL,
-    id_rol        NUMBER NOT NULL
+    id_user       INTEGER PRIMARY KEY AUTOINCREMENT,
+    rut           TEXT NOT NULL,
+    nombre_user   TEXT NOT NULL,
+    contrasena    TEXT NOT NULL,
+    email         TEXT NOT NULL,
+    nombre        TEXT NOT NULL,
+    apellido_pat  TEXT NOT NULL,
+    apellido_mat  TEXT NOT NULL,
+    peso          REAL,
+    estatura      REAL,
+    mesotipo      TEXT,
+    edad          INTEGER,
+    id_rol        INTEGER NOT NULL,
+    FOREIGN KEY (id_rol) REFERENCES roles (id_rol)
 );
-
-ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY (id_user);
-
--- Relaciones (Claves Foráneas)
-
-ALTER TABLE estadisticas
-    ADD CONSTRAINT estadisticas_rutina_fk FOREIGN KEY (id_rutina_us)
-        REFERENCES rutina_usuario (id_rutina_us);
-
-ALTER TABLE resumen
-    ADD CONSTRAINT resumen_estadisticas_fk FOREIGN KEY (id_ent)
-        REFERENCES estadisticas (id_ent);
-
-ALTER TABLE rutina_usuario
-    ADD CONSTRAINT rutina_ejercicio_fk FOREIGN KEY (id_rutina_eje)
-        REFERENCES rutina_ejercicios (id_rutina_eje);
-
-ALTER TABLE rutina_ejercicios
-    ADD CONSTRAINT rutina_ejercicios_fk FOREIGN KEY (id_ejercicio)
-        REFERENCES ejercicios (id_ejercicio);
-
-ALTER TABLE rutina
-    ADD CONSTRAINT rutina_usuario_fk FOREIGN KEY (id_user)
-        REFERENCES usuario (id_user);
-
-ALTER TABLE rutina_usuario
-    ADD CONSTRAINT rutina_usuario_fk FOREIGN KEY (id_rutina)
-        REFERENCES rutina (id_rutina);
-
-ALTER TABLE soporte
-    ADD CONSTRAINT soporte_usuario_fk FOREIGN KEY (id_user)
-        REFERENCES usuario (id_user);
-
-ALTER TABLE usuario
-    ADD CONSTRAINT usuario_roles_fk FOREIGN KEY (id_rol)
-        REFERENCES roles (id_rol);
-
--- ÍNDICES ÚNICOS
-CREATE UNIQUE INDEX idx_usuario_rut ON usuario(rut);
-CREATE UNIQUE INDEX idx_usuario_email ON usuario(email);
