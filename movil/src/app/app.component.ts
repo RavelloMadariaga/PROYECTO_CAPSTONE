@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
+import { DatabaseService } from './services/database.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,10 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [IonicModule, RouterLink],
 })
-export class AppComponent {
-  constructor() {}
+export class AppComponent implements OnInit {
+  constructor(private dbService: DatabaseService) {}
+  ngOnInit() {
+    // Inicializa la conexión a la base de datos al cargar la app
+    this.dbService.initializeDatabase();
+  }
 }
