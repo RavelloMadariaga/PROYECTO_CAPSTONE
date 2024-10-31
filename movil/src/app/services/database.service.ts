@@ -1,217 +1,260 @@
 import { Injectable } from '@angular/core';
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
-import { Platform } from '@ionic/angular';
+import { Firestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc, getDoc } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { initializeApp } from 'firebase/app';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DatabaseService {
-  private dbInstance: SQLiteObject | null = null; 
-  readonly db_name: string = 'DB NutriMove.db';
-
-  constructor(private sqlite: SQLite, private platform: Platform) {
-    this.platform.ready().then(() => {
-      this.initializeDatabase();
-    });
+  constructor(private firestore: Firestore) {
+    console.log('Conectado a Firestore'); // Log de conexión
   }
-
-  async initializeDatabase() {
+   // Tabla: usuario
+   async insertUsuario(user: any) {
+    const usuarioData = {
+      rut: user.rut,
+      nombre_user: user.nombre_user,
+      contrasena: user.contrasena,
+      email: user.email,
+      nombre: user.nombre,
+      apellido_pat: user.apellido_pat,
+      apellido_mat: user.apellido_mat,
+      peso: user.peso,
+      estatura: user.estatura,
+      mesotipo: user.mesotipo,
+      edad: user.edad,
+      id_rol: 2, 
+      fecha_registro: new Date()
+    };
+  
     try {
-      this.dbInstance = await this.sqlite.create({
-        name: this.db_name,
-        location: 'default'
-      });
-      console.log('Base de datos conectada', this.dbInstance);
-    } catch (error) {
-      console.error('Error al conectar la base de datos:', error);
-    }
-  }
-
-  // Tabla: usuario
-  async insertUsuario(user: any) {
-  if (!this.dbInstance) {
-    console.error('Base de datos no inicializada');
-    return; 
-  }
-    const query = `INSERT INTO usuario (rut, nombre_user, contrasena, email, nombre, apellido_pat, apellido_mat, peso, estatura, edad, id_rol) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 2)`;
-    const data = [user.rut, user.nombre_user, user.contrasena, user.email, user.nombre, user.apellido_pat, user.apellido_mat, user.peso, user.estatura, user.edad, user.id_rol];
-    try {
-      await this.dbInstance.executeSql(query, data);
+      await addDoc(collection(this.firestore, 'usuarios'), usuarioData);
       console.log('Usuario insertado');
     } catch (error) {
       console.error('Error al insertar usuario:', error);
     }
   }
 
-  async getUsuarios() {
-    if (!this.dbInstance) {
-      return console.error('Base de datos no inicializada'); 
-    } 
-    const query = `SELECT * FROM usuario`;
+  async getUsuarios(): Promise<{ id: string; [key: string]: any }[]> {
     try {
-      const res = await this.dbInstance.executeSql(query, []);
-      const usuarios = [];
-      for (let i = 0; i < res.rows.length; i++) {
-        usuarios.push(res.rows.item(i));
-      }
-      return usuarios;
+      const snapshot = await getDocs(collection(this.firestore, 'usuarios'));
+      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     } catch (error) {
       console.error('Error al obtener usuarios:', error);
+      return []; 
     }
   }
 
   async updateUsuario(user: any) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return; 
-    }
-    const query = `UPDATE usuario SET rut = ?, nombre_user = ?, contrasena = ?, email = ?, nombre = ?, apellido_pat = ?, apellido_mat = ?, peso = ?, estatura = ?, edad = ?, id_rol = ? WHERE id_user = ?`;
-    const data = [user.rut, user.nombre_user, user.contrasena, user.email, user.nombre, user.apellido_pat, user.apellido_mat, user.peso, user.estatura, user.edad, user.id_rol, user.id_user];
+    const usuarioData = {
+      nombre_user: user.nombre_user,
+      contrasena: user.contrasena,
+      email: user.email,
+      nombre: user.nombre,
+      apellido_pat: user.apellido_pat,
+      apellido_mat: user.apellido_mat,
+      peso: user.peso,
+      estatura: user.estatura,
+      mesotipo: user.mesotipo,
+      edad: user.edad,
+    };
+
     try {
-      await this.dbInstance.executeSql(query, data);
+      const userRef = doc(this.firestore, 'usuarios', user.id);
+      await updateDoc(userRef, usuarioData);
       console.log('Usuario actualizado');
     } catch (error) {
       console.error('Error al actualizar usuario:', error);
     }
   }
 
-  async deleteUsuario(id: number) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return; 
-    }
-    const query = `DELETE FROM usuario WHERE id_user = ?`;
+  async deleteUsuario(id: string) {
     try {
-      await this.dbInstance.executeSql(query, [id]);
+      await deleteDoc(doc(this.firestore, 'usuarios', id));
       console.log('Usuario eliminado');
     } catch (error) {
       console.error('Error al eliminar usuario:', error);
     }
   }
-  // Tabla: ejercicio
-  async insertEjercicio(ejercicio: any) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return ; 
-    }
-    const query = `INSERT INTO ejercicios (nombre_ejercicio, descripcion, repeticiones) VALUES (?, ?, ?)`;
-    const data = [ejercicio.nombre_ejercicio, ejercicio.descripcion, ejercicio.repeticiones];
-    try {
-      await this.dbInstance.executeSql(query, data);
-      console.log('Ejercicio insertado');
-    } catch (error) {
-      console.error('Error al insertar ejercicio:', error);
-    }
-  }
 
-  async getEjercicios() {
-    if (!this.dbInstance) {
-      return console.error('Base de datos no inicializada'); 
-    }
-    const query = `SELECT * FROM ejercicios`;
+  // Tabla: rutina
+  async insertRutina(rutina: any) {
+    const rutinaData = {
+      nombre_rutina: rutina.nombre_rutina,
+      descripcion: rutina.descripcion,
+      id_user: rutina.id_user, 
+      objetivo: rutina.objetivo,
+      ejercicios: rutina.ejercicios, 
+    };
+  
     try {
-      const res = await this.dbInstance.executeSql(query, []);
-      const ejercicios = [];
-      for (let i = 0; i < res.rows.length; i++) {
-        ejercicios.push(res.rows.item(i));
+      const userRef = doc(this.firestore, 'usuarios', rutina.id_user);
+      const userSnap = await getDoc(userRef);
+      if (userSnap.exists()) {
+        await addDoc(collection(this.firestore, 'rutinas'), rutinaData);
+        console.log('Rutina insertada');
+      } else {
+        console.error('Usuario no encontrado');
       }
-      return ejercicios;
     } catch (error) {
-      console.error('Error al obtener ejercicios:', error);
+      console.error('Error al insertar rutina:', error);
+    }
+  }
+  
+
+  async getRutinas(): Promise<{ id: string; [key: string]: any }[]> {
+    try {
+      const snapshot = await getDocs(collection(this.firestore, 'rutinas'));
+      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    } catch (error) {
+      console.error('Error al obtener rutinas:', error);
+      return []; 
     }
   }
 
-  async updateEjercicio(ejercicio: any) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return; 
-    }
-    const query = `UPDATE ejercicios SET nombre_ejercicio = ?, descripcion = ?, repeticiones = ? WHERE id_ejercicio = ?`;
-    const data = [ejercicio.nombre_ejercicio, ejercicio.descripcion, ejercicio.repeticiones, ejercicio.id_ejercicio];
+  async updateRutina(rutina: any) {
+    const rutinaData = {
+      nombre_rutina: rutina.nombre_rutina,
+      descripcion: rutina.descripcion,
+      id_user: rutina.id_user, 
+      objetivo: rutina.objetivo,
+      ejercicios: rutina.ejercicios, 
+    };
+
     try {
-      await this.dbInstance.executeSql(query, data);
-      console.log('Ejercicio actualizado');
+      const rutinaRef = doc(this.firestore, 'rutinas', rutina.id);
+      await updateDoc(rutinaRef, rutinaData);
+      console.log('Rutina actualizada');
     } catch (error) {
-      console.error('Error al actualizar ejercicio:', error);
+      console.error('Error al actualizar rutina:', error);
     }
   }
 
-  async deleteEjercicio(id: number) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return; 
-    }
-    const query = `DELETE FROM ejercicios WHERE id_ejercicio = ?`;
+  async deleteRutina(id: string) {
     try {
-      await this.dbInstance.executeSql(query, [id]);
-      console.log('Ejercicio eliminado');
+      await deleteDoc(doc(this.firestore, 'rutinas', id));
+      console.log('Rutina eliminada');
     } catch (error) {
-      console.error('Error al eliminar ejercicio:', error);
+      console.error('Error al eliminar rutina:', error);
     }
   }
 
   // Tabla: estadisticas
   async insertEstadistica(estadistica: any) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return; 
-    }
-    const query = `INSERT INTO estadisticas (date_recorded, sesiones_completadas, total_sesiones, porcentaje_de_mejora, tiem_total_ent, heart_rate, imc) VALUES (?, ?, ?, ?, ?, ?, ?)`;
-    const data = [estadistica.date_recorded, estadistica.sesiones_completadas, estadistica.total_sesiones, estadistica.porcentaje_de_mejora, estadistica.tiem_total_ent, estadistica.heart_rate, estadistica.imc];
+    const estadisticaData = {
+      date_recorded: estadistica.date_recorded,
+      sesiones_completadas: estadistica.sesiones_completadas,
+      total_sesiones: estadistica.total_sesiones,
+      porcentaje_de_mejora: estadistica.porcentaje_de_mejora,
+      tiempo_total_ent: estadistica.tiempo_total_ent,
+      heart_rate: estadistica.heart_rate,
+      imc: estadistica.imc,
+      id_user: estadistica.id_user,
+    };
+  
     try {
-      await this.dbInstance.executeSql(query, data);
+      await addDoc(collection(this.firestore, 'estadisticas'), estadisticaData);
       console.log('Estadística insertada');
     } catch (error) {
       console.error('Error al insertar estadística:', error);
     }
   }
 
-  async getEstadisticas() {
-    if (!this.dbInstance) {
-      return console.error('Base de datos no inicializada'); 
-    }
-    const query = `SELECT * FROM estadisticas`;
+  async getEstadisticas(): Promise<{ id: string; [key: string]: any }[]> {
     try {
-      const res = await this.dbInstance.executeSql(query, []);
-      const estadisticas = [];
-      for (let i = 0; i < res.rows.length; i++) {
-        estadisticas.push(res.rows.item(i));
-      }
-      return estadisticas;
+      const snapshot = await getDocs(collection(this.firestore, 'estadisticas'));
+      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     } catch (error) {
       console.error('Error al obtener estadísticas:', error);
+      return []; 
     }
   }
 
   async updateEstadistica(estadistica: any) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return; 
-    }
-    const query = `UPDATE estadisticas SET date_recorded = ?, sesiones_completadas = ?, total_sesiones = ?, porcentaje_de_mejora = ?, tiem_total_ent = ?, heart_rate = ?, imc = ? WHERE id_ent = ?`;
-    const data = [estadistica.date_recorded, estadistica.sesiones_completadas, estadistica.total_sesiones, estadistica.porcentaje_de_mejora, estadistica.tiem_total_ent, estadistica.heart_rate, estadistica.imc, estadistica.id_ent];
+    const estadisticaData = {
+      date_recorded: estadistica.date_recorded,
+      sesiones_completadas: estadistica.sesiones_completadas,
+      total_sesiones: estadistica.total_sesiones,
+      porcentaje_de_mejora: estadistica.porcentaje_de_mejora,
+      tiempo_total_ent: estadistica.tiempo_total_ent,
+      heart_rate: estadistica.heart_rate,
+      imc: estadistica.imc,
+      id_user: estadistica.id_user,
+    };
+
     try {
-      await this.dbInstance.executeSql(query, data);
+      const estadisticaRef = doc(this.firestore, 'estadisticas', estadistica.id);
+      await updateDoc(estadisticaRef, estadisticaData);
       console.log('Estadística actualizada');
     } catch (error) {
       console.error('Error al actualizar estadística:', error);
     }
   }
 
-  async deleteEstadistica(id: number) {
-    if (!this.dbInstance) {
-      console.error('Base de datos no inicializada');
-      return; 
-    }
-    const query = `DELETE FROM estadisticas WHERE id_ent = ?`;
+  async deleteEstadistica(id: string) {
     try {
-      await this.dbInstance.executeSql(query, [id]);
+      await deleteDoc(doc(this.firestore, 'estadisticas', id));
       console.log('Estadística eliminada');
     } catch (error) {
       console.error('Error al eliminar estadística:', error);
     }
   }
 
-  // tabla restante: resumen, roles, rutina, rutina_ejercicios, rutina_usuario, soporte
+  // Tabla: soporte
+  async insertSoporte(soporte: any) {
+    const soporteData = {
+      modificacion: soporte.modificacion,
+      razon: soporte.razon,
+      fecha: soporte.fecha,
+      id_user: soporte.id_user,
+    };
+  
+    try {
+      await addDoc(collection(this.firestore, 'soporte'), soporteData);
+      console.log('Soporte insertado');
+    } catch (error) {
+      console.error('Error al insertar soporte:', error);
+    }
+  }
+
+  async getSoportes(): Promise<{ id: string; [key: string]: any }[]> {
+    try {
+      const snapshot = await getDocs(collection(this.firestore, 'soporte'));
+      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    } catch (error) {
+      console.error('Error al obtener soportes:', error);
+      return []; 
+    }
+  }
+
+  async updateSoporte(soporte: any) {
+    const soporteData = {
+      modificacion: soporte.modificacion,
+      razon: soporte.razon,
+      fecha: soporte.fecha,
+      id_user: soporte.id_user,
+    };
+
+    try {
+      const soporteRef = doc(this.firestore, 'soporte', soporte.id);
+      await updateDoc(soporteRef, soporteData);
+      console.log('Soporte actualizado');
+    } catch (error) {
+      console.error('Error al actualizar soporte:', error);
+    }
+  }
+
+  async deleteSoporte(id: string) {
+    try {
+      const soporteRef = doc(this.firestore, 'soporte', id);
+      await deleteDoc(soporteRef);
+      console.log('Soporte eliminado');
+    } catch (error) {
+      console.error('Error al eliminar soporte:', error);
+    }
+  }
 }
 
+
+  // Aquí puedes añadir métodos para las tablas restantes: resumen, roles, rutina, rutina_ejercicios, rutina_usuario, soporte

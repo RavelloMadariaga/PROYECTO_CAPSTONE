@@ -5,7 +5,9 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { addIcons } from 'ionicons';
-import { SQLite } from '@ionic-native/sqlite/ngx';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { environment } from './environments/environment';
 
 const icons = {
   home: 'home',
@@ -22,9 +24,11 @@ addIcons(icons);
 defineCustomElements(window);
 
 bootstrapApplication(AppComponent, {
-  providers: [SQLite,
+  providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
+    provideFirebaseApp(() => initializeApp(environment.firebase)), 
+    provideFirestore(() => getFirestore()), 
   ],
 });
