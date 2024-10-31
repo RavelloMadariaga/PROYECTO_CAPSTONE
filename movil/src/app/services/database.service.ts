@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { Platform } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -7,31 +8,25 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 export class DatabaseService {
   private dbInstance: SQLiteObject | null = null; 
   readonly db_name: string = 'DB NutriMove.db';
-  readonly db_table_usuario: string = 'usuario';
-  readonly db_table_ejercicios: string = 'ejercicios';
-  readonly db_table_estadisticas: string = 'estadisticas';
-  readonly db_table_resumen: string = 'resumen';
-  readonly db_table_roles: string = 'roles';
-  readonly db_table_rutina: string = 'rutina';
-  readonly db_table_rutina_ejercicios: string = 'rutina_ejercicios';
-  readonly db_table_rutina_usuario: string = 'rutina_usuario';
-  readonly db_table_soporte: string = 'soporte';
 
-  constructor(private sqlite: SQLite) {
-    this.initializeDatabase();
+  constructor(private sqlite: SQLite, private platform: Platform) {
+    this.platform.ready().then(() => {
+      this.initializeDatabase();
+    });
   }
-  // Inicializar conexión a la base de datos
+
   async initializeDatabase() {
     try {
       this.dbInstance = await this.sqlite.create({
         name: this.db_name,
         location: 'default'
       });
-      console.log('Base de datos conectada');
+      console.log('Base de datos conectada', this.dbInstance);
     } catch (error) {
       console.error('Error al conectar la base de datos:', error);
     }
   }
+
   // Tabla: usuario
   async insertUsuario(user: any) {
   if (!this.dbInstance) {
